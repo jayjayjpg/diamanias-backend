@@ -1,0 +1,9 @@
+[package]
+name = "diamanias-backend"
+version = "0.1.0"
+authors = ["Jessica Jordan <jessica.jordan.fe.dev@gmail.com>"]
+
+[dependencies]
+actix-web = "0.7"
+listenfd = "0.3"
+predicates = "0.9"

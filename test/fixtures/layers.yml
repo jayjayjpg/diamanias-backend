@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bg_img: MyString
+  fg_img: MyString
+  style_class: MyString
+  kind: MyString
+  panel: one
+
+two:
+  bg_img: MyString
+  fg_img: MyString
+  style_class: MyString
+  kind: MyString
+  panel: two

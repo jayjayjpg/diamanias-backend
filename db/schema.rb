@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_01_125017) do
+ActiveRecord::Schema.define(version: 2018_10_01_220147) do
 
   create_table "chapters", force: :cascade do |t|
     t.string "name"
@@ -18,6 +18,18 @@ ActiveRecord::Schema.define(version: 2018_10_01_125017) do
     t.integer "number"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "layers", force: :cascade do |t|
+    t.string "bg_img"
+    t.string "fg_img"
+    t.string "style_class"
+    t.string "layer_kind"
+    t.integer "num_of_frames"
+    t.integer "panel_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["panel_id"], name: "index_layers_on_panel_id"
   end
 
   create_table "panels", force: :cascade do |t|

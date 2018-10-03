@@ -10,7 +10,7 @@ class PanelsController < ApplicationController
 
   # GET /panels/1
   def show
-    render json: @panel
+    render json: @panel, include: ['layers']
   end
 
   # POST /panels

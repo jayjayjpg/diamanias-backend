@@ -12,27 +12,78 @@ chapter = Chapter.create(:name => "Chapter 1", :number => "1")
 1.upto(4) do |i|
    chapter.panels << Panel.create(:name => "Panel xl#{i}", :number => "#{i}", :kind => "xl", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
+   chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
+   chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel l#{i}", :number => "#{i}", :kind => "l", :chapter => chapter)
+   chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
 end
 
 first_panel = chapter.panels.first
 second_panel = chapter.panels[1]
 third_panel = chapter.panels[2]
+fourth_panel = chapter.panels[3]
+fifth_panel = chapter.panels[4]
+seventh_panel = chapter.panels[6]
 
 first_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "http://localhost:4200/assets/img/sea2.jpg",
-  :style_class => "comic-panel__layer--the-sea",
-  :layer_kind => "fast_forward",
+  :bg_img => "http://localhost:4200/assets/img/boatshot.png",
+  :style_class => "comic-panel__layer--brighten",
+  :layer_kind => "still",
   :panel => first_panel,
-  :num_of_frames => 3
+  :num_of_frames => 1
 )
 
-first_panel.layers << Layer.create(
+seventh_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/sea2.jpg?v=1.0",
+  :style_class => "comic-panel__layer--the-sea",
+  :layer_kind => "forward",
+  :panel => seventh_panel,
+  :num_of_frames => 4
+)
+
+seventh_panel.layers << Layer.create(
   :fg_img => "",
   :bg_img => "http://localhost:4200/assets/img/boat2.png",
   :style_class => "comic-panel__layer--at-sea",
-  :layer_kind => "forward",
-  :panel => second_panel,
+  :layer_kind => "fast-forward",
+  :panel => seventh_panel,
   :num_of_frames => 5
+)
+
+second_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/boatshot.png",
+  :style_class => "",
+  :layer_kind => "still",
+  :panel => second_panel,
+  :num_of_frames => 1
+)
+
+third_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/boatshot2.jpg",
+  :style_class => "",
+  :layer_kind => "still",
+  :panel => third_panel,
+  :num_of_frames => 1
+)
+
+fourth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/boatshot3.jpg",
+  :style_class => "",
+  :layer_kind => "still",
+  :panel => fourth_panel,
+  :num_of_frames => 1
+)
+
+fifth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/turnboat-sprite.jpg",
+  :style_class => "comic-panel__layer--the-sea",
+  :layer_kind => "forward-once",
+  :panel => fifth_panel,
+  :num_of_frames => 3
 )

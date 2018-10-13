@@ -23,6 +23,7 @@ second_panel = chapter.panels[1]
 third_panel = chapter.panels[2]
 fourth_panel = chapter.panels[3]
 fifth_panel = chapter.panels[4]
+sixth_panel = chapter.panels[5]
 seventh_panel = chapter.panels[6]
 
 first_panel.layers << Layer.create(
@@ -70,6 +71,15 @@ third_panel.layers << Layer.create(
   :num_of_frames => 1
 )
 
+fifth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "http://localhost:4200/assets/img/boatshot2.jpg",
+  :style_class => "",
+  :layer_kind => "still",
+  :panel => sixth_panel,
+  :num_of_frames => 1
+)
+
 fourth_panel.layers << Layer.create(
   :fg_img => "",
   :bg_img => "http://localhost:4200/assets/img/boatshot3.jpg",
@@ -79,7 +89,7 @@ fourth_panel.layers << Layer.create(
   :num_of_frames => 1
 )
 
-fifth_panel.layers << Layer.create(
+sixth_panel.layers << Layer.create(
   :fg_img => "",
   :bg_img => "http://localhost:4200/assets/img/turnboat-sprite.jpg",
   :style_class => "comic-panel__layer--the-sea",

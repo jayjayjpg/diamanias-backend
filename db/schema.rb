@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2018_10_01_220147) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "chapters", force: :cascade do |t|
     t.string "name"
     t.string "subtitle"
@@ -26,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_220147) do
     t.string "style_class"
     t.string "layer_kind"
     t.integer "num_of_frames"
-    t.integer "panel_id"
+    t.bigint "panel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["panel_id"], name: "index_layers_on_panel_id"
@@ -36,10 +39,12 @@ ActiveRecord::Schema.define(version: 2018_10_01_220147) do
     t.string "name"
     t.string "kind"
     t.integer "number"
-    t.integer "chapter_id"
+    t.bigint "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["chapter_id"], name: "index_panels_on_chapter_id"
   end
 
+  add_foreign_key "layers", "panels"
+  add_foreign_key "panels", "chapters"
 end

@@ -49,3 +49,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Added at 2018-10-13 09:40:49 +0200 by jj:
 gem "will_paginate", "~> 3.1"
+
+# Added at 2018-10-13 09:45:49 +0200 by jj:
+gem "api-pagination", "~> 4.8"

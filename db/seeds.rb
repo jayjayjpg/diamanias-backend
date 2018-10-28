@@ -9,7 +9,7 @@
 
 chapter = Chapter.create(:name => "Chapter 1", :number => "1")
 
-1.upto(4) do |i|
+1.upto(100) do |i|
    chapter.panels << Panel.create(:name => "Panel xl#{i}", :number => "#{i}", :kind => "xl", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)

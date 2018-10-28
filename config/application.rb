@@ -34,7 +34,7 @@ module DiamaniasBackend
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'localhost:4200', '127.0.0.1:4200', 'https://diamanias.com'
+        origins 'localhost:4200', '127.0.0.1:4200', 'https://diamanias.com', 'https://jessica-jordan.github.io'
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end

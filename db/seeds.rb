@@ -28,7 +28,7 @@ seventh_panel = chapter.panels[6]
 
 first_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boatshot.png",
+  :bg_img => "assets/img/boatshot.png",
   :style_class => "comic-panel__layer--brighten",
   :layer_kind => "still",
   :panel => first_panel,
@@ -37,7 +37,7 @@ first_panel.layers << Layer.create(
 
 seventh_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/sea2.jpg?v=1.0",
+  :bg_img => "assets/img/sea2.jpg?v=1.0",
   :style_class => "comic-panel__layer--the-sea",
   :layer_kind => "forward",
   :panel => seventh_panel,
@@ -46,7 +46,7 @@ seventh_panel.layers << Layer.create(
 
 seventh_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boat2.png",
+  :bg_img => "assets/img/boat2.png",
   :style_class => "comic-panel__layer--at-sea",
   :layer_kind => "fast-forward",
   :panel => seventh_panel,
@@ -55,7 +55,7 @@ seventh_panel.layers << Layer.create(
 
 second_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boatshot.png",
+  :bg_img => "assets/img/boatshot.png",
   :style_class => "",
   :layer_kind => "still",
   :panel => second_panel,
@@ -64,7 +64,7 @@ second_panel.layers << Layer.create(
 
 third_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boatshot2.jpg",
+  :bg_img => "assets/img/boatshot2.jpg",
   :style_class => "",
   :layer_kind => "still",
   :panel => third_panel,
@@ -73,7 +73,7 @@ third_panel.layers << Layer.create(
 
 fifth_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boatshot2.jpg",
+  :bg_img => "assets/img/boatshot2.jpg",
   :style_class => "",
   :layer_kind => "still",
   :panel => sixth_panel,
@@ -82,7 +82,7 @@ fifth_panel.layers << Layer.create(
 
 fourth_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/boatshot3.jpg",
+  :bg_img => "assets/img/boatshot3.jpg",
   :style_class => "",
   :layer_kind => "still",
   :panel => fourth_panel,
@@ -91,7 +91,7 @@ fourth_panel.layers << Layer.create(
 
 sixth_panel.layers << Layer.create(
   :fg_img => "",
-  :bg_img => "/diamanias/assets/img/turnboat-sprite.jpg",
+  :bg_img => "assets/img/turnboat-sprite.jpg",
   :style_class => "comic-panel__layer--the-sea",
   :layer_kind => "forward-once",
   :panel => fifth_panel,

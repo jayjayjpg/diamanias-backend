@@ -9,7 +9,7 @@
 
 chapter = Chapter.create(:name => "Chapter 1", :number => "1")
 
-1.upto(100) do |i|
+1.upto(1) do |i|
    chapter.panels << Panel.create(:name => "Panel xl#{i}", :number => "#{i}", :kind => "xl", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
@@ -18,6 +18,10 @@ chapter = Chapter.create(:name => "Chapter 1", :number => "1")
    chapter.panels << Panel.create(:name => "Panel norm#{i}", :number => "#{i}", :kind => "default", :chapter => chapter)
 end
 
+chapter.panels << Panel.create(:name => "Panel xl#{6}", :number => "#{6}", :kind => "xl", :chapter => chapter)
+chapter.panels << Panel.create(:name => "Panel norm#{7}", :number => "#{7}", :kind => "default", :chapter => chapter)
+chapter.panels << Panel.create(:name => "Panel l#{8}", :number => "#{8}", :kind => "l", :chapter => chapter)
+
 first_panel = chapter.panels.first
 second_panel = chapter.panels[1]
 third_panel = chapter.panels[2]
@@ -25,6 +29,8 @@ fourth_panel = chapter.panels[3]
 fifth_panel = chapter.panels[4]
 sixth_panel = chapter.panels[5]
 seventh_panel = chapter.panels[6]
+eighth_panel = chapter.panels[7]
+ninth_panel = chapter.panels[8]
 
 first_panel.layers << Layer.create(
   :fg_img => "",
@@ -96,4 +102,31 @@ sixth_panel.layers << Layer.create(
   :layer_kind => "forward-once",
   :panel => fifth_panel,
   :num_of_frames => 3
+)
+
+eighth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "assets/img/boatshot_back.jpg",
+  :style_class => "",
+  :layer_kind => "still",
+  :panel => eighth_panel,
+  :num_of_frames => 1
+)
+
+ninth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "assets/img/water-sprite.jpg",
+  :style_class => "comic-panel__layer--the-sea",
+  :layer_kind => "forward",
+  :panel => ninth_panel,
+  :num_of_frames => 3
+)
+
+ninth_panel.layers << Layer.create(
+  :fg_img => "",
+  :bg_img => "assets/img/bubbles-sprite.png",
+  :style_class => "comic-panel__layer--at-sea",
+  :layer_kind => "fast-forward",
+  :panel => ninth_panel,
+  :num_of_frames => 4
 )

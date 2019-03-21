@@ -5,20 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+### update
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+git push heroku master
+heroku pg:reset
+heroku run rake db:migrate
+heroku run rake db:seed
+```

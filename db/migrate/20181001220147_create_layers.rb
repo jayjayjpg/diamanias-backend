@@ -6,6 +6,8 @@ class CreateLayers < ActiveRecord::Migration[5.2]
       t.string :style_class
       t.string :layer_kind
       t.integer :num_of_frames
+      t.string :text
+      t.string :size
       t.references :panel, foreign_key: true
 
       t.timestamps

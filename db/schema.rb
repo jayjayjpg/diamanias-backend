@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2018_10_01_220147) do
     t.string "style_class"
     t.string "layer_kind"
     t.integer "num_of_frames"
+    t.string "text"
+    t.string "size"
     t.bigint "panel_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,6 +41,7 @@ ActiveRecord::Schema.define(version: 2018_10_01_220147) do
     t.string "name"
     t.string "kind"
     t.integer "number"
+    t.string "description"
     t.bigint "chapter_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

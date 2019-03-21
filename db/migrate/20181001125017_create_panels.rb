@@ -4,6 +4,7 @@ class CreatePanels < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :kind
       t.integer :number
+      t.string :description
       t.references :chapter, foreign_key: true
 
       t.timestamps
